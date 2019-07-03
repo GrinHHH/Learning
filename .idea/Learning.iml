@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/Isis" />
+      <excludeFolder url="file://$MODULE_DIR$/Udacity" />
+      <excludeFolder url="file://$MODULE_DIR$/deeeeeep/MNIST" />
+      <excludeFolder url="file://$MODULE_DIR$/deeeeeep/MNIST_data" />
+      <excludeFolder url="file://$MODULE_DIR$/mining" />
+      <excludeFolder url="file://$MODULE_DIR$/other_projects" />
+      <excludeFolder url="file://$MODULE_DIR$/quotesbot-master" />
+      <excludeFolder url="file://$MODULE_DIR$/sensor/eigen" />
+      <excludeFolder url="file://$MODULE_DIR$/sensor/数据" />
+      <excludeFolder url="file://$MODULE_DIR$/spider/data" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.6" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+  </component>
+</module>
