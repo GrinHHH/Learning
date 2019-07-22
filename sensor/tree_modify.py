@@ -158,41 +158,58 @@ def predict(tree, data):        # 定义函数预测分类，tree为树模型，
 
 
 # feature_order = ['max','min','mean','range','var','std']    # 与表格数据的属性对应，用于节点模型保存
-feature = [0,1,2,3,4,5,6]
-threshold = 0.01        # 剪枝边界，由于没有界定经验，故不进行剪枝
+
+# 从这里开始
+# 目前特征有5个，就01234代表了，这里就单纯地是自然数排列代表每个特征
+# 之前程序写的像一坨屎，这里就不好改了= =见谅
+feature = [0,1,2,3,4]
+# threshold = 0.01        # 剪枝边界，由于没有界定经验，故不进行剪枝
 result = []         # 用于存放所有测试集的结果
 result_2=[]
 
+# 整个下面一块用来读取之前生成的excel，函数输入，后两个为列数和行数，
+# 列数必须和excel相同，行数小于等于excel，相当于取多少样本
 workbook1 = xlrd.open_workbook(r'唐森/car.xls')
 sheet_train1 = workbook1.sheet_by_name('sheet1')
-x1 = xls_tolist_python(sheet_train1, 8, 172)
+x1 = xls_tolist_python(sheet_train1, 6, 172)
 
 workbook2 = xlrd.open_workbook(r'唐森/man.xls')
 sheet_train1 = workbook2.sheet_by_name('sheet1')
-x2 = xls_tolist_python(sheet_train1, 8, 242)
+x2 = xls_tolist_python(sheet_train1, 6, 242)
 
 workbook3 = xlrd.open_workbook(r'唐森/en2.xls')
 sheet_train1 = workbook3.sheet_by_name('sheet1')
-x3 = xls_tolist_python(sheet_train1, 8, 236)
+x3 = xls_tolist_python(sheet_train1, 6, 236)
 
+workbook4 = xlrd.open_workbook(r'唐森/en2.xls')
+sheet_train1 = workbook4.sheet_by_name('sheet1')
+x4 = xls_tolist_python(sheet_train1, 6, 110)
+# 到这里数据加载完毕
 # 首先把车的标签置为1，做一次二分类
+# 即先区分有没有目标,可以理解为目标检测部分
 for row in range(len(x1)):
     x1[row][-1] = 1
-data_set1 = np.concatenate((x1, x2, x3), axis=0)
+# 生成数据集
+data_set1 = np.concatenate((x1, x2, x3,x4), axis=0)
 # 再把标签变为0，车0人1做一次二分类
 for row in range(len(x1)):
     x1[row][-1] = 0
+# 这里只用人和车的数据
 data_set2 = np.concatenate((x1, x2), axis=0)
+# 下面为数据集分割
 train_set_1, test_set_1 = train_test_split(data_set1, test_size=0.2)
 train_set_2, test_set_2 = train_test_split(data_set2, test_size=0.2)
 
-# 想要自主选取特征的话 要从这里改
+# 生成决策树模型
 tree_mod_1 = createClassifTree(train_set_1)
 tree_mod_2 = createClassifTree(train_set_2)
+# 模型打印,之后粘贴到单片机程序中,全局变量里有两个部分
 print('Tree mod_1:', str(tree_mod_1).replace(' ', '').replace('{', '').replace('}', ''))
 print('Tree mod_2:', str(tree_mod_2).replace(' ', '').replace('{', '').replace('}', ''))
 # print 'Tree mod_1:', str(tree_mod_1).replace(' ', '').replace('{', '').replace('}', '')
 # print 'Tree mod_2:', str(tree_mod_2).replace(' ', '').replace('{', '').replace('}', '')
+
+# 下面就是测试了,输出两个混淆矩阵,看模型的分类效果,第一个是目标检测,第二个是人车
 for i in range(len(test_set_1)):
     result.append(predict(tree_mod_1, test_set_1[i][0:7]))
 result = np.array(result)

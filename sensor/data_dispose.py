@@ -75,6 +75,7 @@ def generate_eigenvalue(input_path,output_path,file_num,class_name,slide_length,
             eigenvalue = cal_eigenvalue(slide,class_name)
             eigen_list.append(eigenvalue)
         print ('one done')
+    eigen_list = np.array(eigen_list)
     file_excel = xlwt.Workbook()
     file_excel_sheet1 = file_excel.add_sheet(u'sheet1', cell_overwrite_ok=True)
     for rows in range(len(eigen_list)-1):
@@ -114,13 +115,25 @@ def cal_eigenvalue(data, class_name):
     Skewness_fr = const_fr * Skewness_fr / np.power(std_fr, 3)
     mean_50 = np.mean(fr_50)
     mean_150 = np.mean(fr_150)
-    return [energy, Kurtosis / len_data, Skewness, Kurtosis_fr / len_fr, Skewness_fr, mean_50, mean_150, class_name]
+    # return [energy, Kurtosis / len_data, Skewness, Kurtosis_fr / len_fr, Skewness_fr, mean_50, mean_150, class_name]
+    return [energy, Kurtosis / len_data,  Kurtosis_fr / len_fr,  mean_50, mean_150, class_name]
 
 
+# 从这里开始，data_dispose用来删除数据里的时间戳，但有时候处理完还会报错，需要去txt里看看第二行是不是有突出部分
+# 数据文件命名统一为0开始，依次累加，如0.txt,1.txt....
+# 输入为：文件路径、文件数量。函数中路径都是目标文件的文件夹路径，比如0.txt，路径为xxx/xxx/0.txt，那么输入为xxx/xxx/
 # for f_path in path:
 #     data_dispose(f_path,5)
+
+# data_divide函数用来切分数据有效部分，参数为输入路径，输出路径，待切分的文件数量
+# 使用方法：函数会显示一张数据可视化图片，根据图片需要给出我们认为是有效数据的数据段，
+# 如100 500 1000 2000指100-500，1000-2000两个数据段
+# 另外，这里至少需要一个数据段；返回的为按段切分好的数据片段文件，切了几段就有几个，最后整合在输出路径下
+# 有个没测试的地方，建议使用前先把输出路径文件夹建好，没引入os包，我忘了看这个函数会不会自己建立文件夹了= =
 # data_divide('唐森/temp/man/','唐森/disposed/man/',5)
-# generate_eigenvalue('唐森/disposed/en2/','唐森/en2.xls',5,0,2000,500,7)
-# data_dispose('',2)
-# data = np.loadtxt('1.txt')
-generate_eigenvalue('','唐森/en_.xls',1,0,2000,500,7)
+
+# 这个函数用来生成5维的特征向量，保存为一个Excel
+# 参数为：输入路径，输出路径，文件数量（即上一步生成的文件数），标签，多少个数据为一组（用多少个数据算特征，目前为2k），
+# 滑动窗口的步长（每隔多少个数据做一次特征计算），最后一个是特征的数量（不含标签）
+# 这里的输出路径不一样，给的不是文件夹，而是最终文件路径
+generate_eigenvalue('唐森/2019-7-1/','唐森/en3.xls',1,0,2000,500,5)
