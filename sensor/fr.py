@@ -27,12 +27,13 @@ from matplotlib import pyplot as plt
 #     # plt.savefig('image-fr/en/en_%d.jpg'%i)
 #     plt.show()
 #     plt.close()
-for i in range(2):
+for i in range(3):
 
-    data = np.loadtxt('唐森/2019-7-1/%d.txt'%i)
-    plt.subplot(2,1,i+1)
+    data = np.loadtxt('%d.txt'%i)
     plt.plot(data)
-plt.show()
+    plt.show()
+
+
 
 
 

@@ -165,7 +165,7 @@ def predict(tree, data):        # 定义函数预测分类，tree为树模型，
 feature = [0,1,2,3,4]
 # threshold = 0.01        # 剪枝边界，由于没有界定经验，故不进行剪枝
 result = []         # 用于存放所有测试集的结果
-result_2=[]
+result_2 = []
 
 # 整个下面一块用来读取之前生成的excel，函数输入，后两个为列数和行数，
 # 列数必须和excel相同，行数小于等于excel，相当于取多少样本
@@ -181,21 +181,29 @@ workbook3 = xlrd.open_workbook(r'唐森/en2.xls')
 sheet_train1 = workbook3.sheet_by_name('sheet1')
 x3 = xls_tolist_python(sheet_train1, 6, 236)
 
-workbook4 = xlrd.open_workbook(r'唐森/en2.xls')
+workbook4 = xlrd.open_workbook(r'唐森/en3.xls')
 sheet_train1 = workbook4.sheet_by_name('sheet1')
 x4 = xls_tolist_python(sheet_train1, 6, 110)
+
+workbook5 = xlrd.open_workbook(r'唐森/man_3.xls')
+sheet_train1 = workbook5.sheet_by_name('sheet1')
+x5 = xls_tolist_python(sheet_train1, 6, 54)
+
+workbook6 = xlrd.open_workbook(r'唐森/man_8_12.xls')
+sheet_train1 = workbook6.sheet_by_name('sheet1')
+x6 = xls_tolist_python(sheet_train1, 6, 54)
 # 到这里数据加载完毕
 # 首先把车的标签置为1，做一次二分类
 # 即先区分有没有目标,可以理解为目标检测部分
 for row in range(len(x1)):
     x1[row][-1] = 1
 # 生成数据集
-data_set1 = np.concatenate((x1, x2, x3,x4), axis=0)
+data_set1 = np.concatenate((x1, x3,x4,x5,x6), axis=0)
 # 再把标签变为0，车0人1做一次二分类
 for row in range(len(x1)):
     x1[row][-1] = 0
 # 这里只用人和车的数据
-data_set2 = np.concatenate((x1, x2), axis=0)
+data_set2 = np.concatenate((x1,x5,x6), axis=0)
 # 下面为数据集分割
 train_set_1, test_set_1 = train_test_split(data_set1, test_size=0.2)
 train_set_2, test_set_2 = train_test_split(data_set2, test_size=0.2)
