@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 #import socket module
 from socket import *
-
+from urllib.parse import quote,unquote
 
 serverSocket = socket(AF_INET, SOCK_STREAM)
 #Prepare a sever socket
-serverSocket.bind(('10.106.20.113',80))
+serverSocket.bind(('10.51.180.209',800))
 serverSocket.listen(5)
-
+# path = bytes('D:/','utf-8')
+path = 'D:/'
 while True:
     # Establish the connection
     print ('Ready to serve...')
@@ -20,11 +21,15 @@ while True:
             connectionSocket.send(header.encode())
             connectionSocket.close()
         else:
-            filename = message.split()[1]
-            f = open(filename[1:],'rb')
+            filename = bytes.decode(message.split()[1])
+            name = unquote(filename[1:])
+            # print(name)
+            f = open(path+name,'rb')
             outputdata = f.read()
             #Send one HTTP header line into socket
-            header = ' HTTP/1.1 200 OK\nConnection: close\nContent-Type: image/jpeg\nContent-Length: %d\n\n' % (len(outputdata))
+            header = ' HTTP/1.1 200 OK\nConnection: close\nContent-Type: text/html' \
+                     '\nContent-Length' \
+                     ': %d\n\n' % (len(outputdata))
             connectionSocket.send(header.encode())
             #Send the content of the requested file to the client
 
