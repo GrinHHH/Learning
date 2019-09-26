@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="667f4db9-049d-48de-8921-34ae24e7ff68" name="Default Changelist" comment="新的任务，看看写出来会不会亏钱。。。">
-      <change beforePath="$PROJECT_DIR$/.idea/Learning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Learning.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="667f4db9-049d-48de-8921-34ae24e7ff68" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider/steam_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider/steam_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/steam_market/steam_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider/steam_market/steam_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/ProxyServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/ProxyServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WebProxy.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/WebProxy.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,37 +17,54 @@
     <session id="-1587772644">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="html" value="5" />
           <entry key="ipynb" value="1" />
-          <entry key="py" value="37" />
+          <entry key="json" value="5" />
+          <entry key="py" value="70" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="HTML" value="5" />
           <entry key="IPNB" value="1" />
-          <entry key="Python" value="37" />
+          <entry key="JSON" value="5" />
+          <entry key="Python" value="70" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
-          <entry key="git.branch.compare" value="1" />
+          <entry key="git.branch.compare" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4521" />
+          <entry key="html" value="1357" />
+          <entry key="json" value="18" />
+          <entry key="py" value="9600" />
+          <entry key="txt" value="91" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="4521" />
+          <entry key="HTML" value="1357" />
+          <entry key="JSON" value="18" />
+          <entry key="PLAIN_TEXT" value="91" />
+          <entry key="Python" value="9600" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.10" value="2" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.closed" value="14" />
+          <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.11" value="4" />
+          <entry key="project.open.time.12" value="3" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
     </session>
@@ -57,33 +74,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spider/steam_test.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/server_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="119" column="33" lean-forward="true" selection-start-line="119" selection-start-column="33" selection-end-line="119" selection-end-column="33" />
+            <state relative-caret-position="500">
+              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <marker date="1565709236374" expanded="false" signature="1361:1362" ph="..." />
-                <marker date="1565709236374" expanded="true" signature="2942:3192" ph="..." />
+                <element signature="e#46#66#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/not_git/Udacity/basic/py/conclusions_groupby-zh.py">
+        <entry file="file://D:/video_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="100">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#p#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#video#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/not_git/Udacity/basic/py/query_filter-zh.py">
+        <entry file="file://$PROJECT_DIR$/web/WebProxy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-808" />
+            <state relative-caret-position="620">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/ProxyServer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <marker date="1568601853643" expanded="true" signature="248:255" ph="..." />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -138,16 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="E:/Computer-Networking-A-Top-Down-Approach-NOTES-master/SocketProgrammingAssignment/作业5-ICMPping程序/source/Ping.py" />
-        <option value="$PROJECT_DIR$/web/ping.py" />
-        <option value="$PROJECT_DIR$/web/ICMP.py" />
-        <option value="$PROJECT_DIR$/Udacity/conclusions_quiz-zh.py" />
-        <option value="$PROJECT_DIR$/Udacity/csv_learning.py" />
-        <option value="E:/Downloads/appending-zh (1).py" />
-        <option value="$PROJECT_DIR$/Udacity/assessing-zh.py" />
-        <option value="$PROJECT_DIR$/Udacity/cleaning_practice-zh.py" />
-        <option value="$PROJECT_DIR$/Udacity/communicate_quiz-zh.ipynb" />
-        <option value="E:/Downloads/visuals_quiz-zh.ipynb" />
         <option value="E:/Downloads/communicate_quiz-zh.ipynb" />
         <option value="$PROJECT_DIR$/Udacity/appending.ipynb" />
         <option value="$PROJECT_DIR$/Udacity/appending-zh.ipynb" />
@@ -164,7 +198,6 @@
         <option value="$PROJECT_DIR$/spider/Spider.py" />
         <option value="$PROJECT_DIR$/netease/uc2mp3.py" />
         <option value="$PROJECT_DIR$/web/Son`client.py" />
-        <option value="$PROJECT_DIR$/web/server_test.py" />
         <option value="$PROJECT_DIR$/spider/intern.py" />
         <option value="$PROJECT_DIR$/spider/scrapydemp.py" />
         <option value="$PROJECT_DIR$/spider/test.sh" />
@@ -189,6 +222,17 @@
         <option value="$PROJECT_DIR$/sensor/data_dispose.py" />
         <option value="$PROJECT_DIR$/sensor/tree_modify.py" />
         <option value="$PROJECT_DIR$/spider/steam_test.py" />
+        <option value="$PROJECT_DIR$/spider/steam_market/steam_test.py" />
+        <option value="$PROJECT_DIR$/spider/steam_market/steam_login.py" />
+        <option value="$PROJECT_DIR$/web/video_stream.html" />
+        <option value="$PROJECT_DIR$/web/ProxyServer.py" />
+        <option value="$PROJECT_DIR$/web/WebProxy.py" />
+        <option value="$PROJECT_DIR$/web/video_test.html" />
+        <option value="$PROJECT_DIR$/web/server_test.py" />
+        <option value="D:/test.py" />
+        <option value="D:/name.json" />
+        <option value="$PROJECT_DIR$/web/test.py" />
+        <option value="D:/video_test.html" />
       </list>
     </option>
   </component>
@@ -203,7 +247,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,33 +257,13 @@
             <path>
               <item name="Learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="not_git" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="not_git" type="462c0819:PsiDirectoryNode" />
-              <item name="Udacity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="not_git" type="462c0819:PsiDirectoryNode" />
-              <item name="Udacity" type="462c0819:PsiDirectoryNode" />
-              <item name="basic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="not_git" type="462c0819:PsiDirectoryNode" />
-              <item name="Udacity" type="462c0819:PsiDirectoryNode" />
-              <item name="basic" type="462c0819:PsiDirectoryNode" />
-              <item name="py" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -266,7 +289,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.steam_test">
+  <component name="RunManager" selected="Python.test">
     <configuration name="Learning" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="Learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -305,7 +328,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="UnivercityRating" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="WebProxy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -313,11 +336,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spider" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/UnivercityRating.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web/WebProxy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -326,7 +349,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="data_dispose" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="server_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -334,11 +357,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sensor" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sensor/data_dispose.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web/server_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -347,7 +370,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="fr" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="steam_login" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -355,11 +378,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sensor" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spider/steam_market" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sensor/fr.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/steam_market/steam_login.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -368,7 +391,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="steam_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -376,11 +399,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spider" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="D:/" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/steam_test.py" />
+      <option name="SCRIPT_NAME" value="D:/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -389,7 +412,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tree_modify" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -397,11 +420,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sensor" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sensor/tree_modify.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -413,19 +436,19 @@
     <list>
       <item itemvalue="Jupyter Notebook.Learning" />
       <item itemvalue="Python.ProxyServer" />
-      <item itemvalue="Python.data_dispose" />
-      <item itemvalue="Python.fr" />
-      <item itemvalue="Python.tree_modify" />
-      <item itemvalue="Python.steam_test" />
-      <item itemvalue="Python.UnivercityRating" />
+      <item itemvalue="Python.steam_login" />
+      <item itemvalue="Python.WebProxy" />
+      <item itemvalue="Python.server_test" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.test (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.steam_test" />
-        <item itemvalue="Python.UnivercityRating" />
-        <item itemvalue="Python.tree_modify" />
-        <item itemvalue="Python.data_dispose" />
-        <item itemvalue="Python.fr" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.test (1)" />
+        <item itemvalue="Python.server_test" />
+        <item itemvalue="Python.WebProxy" />
+        <item itemvalue="Python.steam_login" />
       </list>
     </recent_temporary>
   </component>
@@ -454,7 +477,35 @@
       <option name="project" value="LOCAL" />
       <updated>1565612705822</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="完成了初始的收入计算">
+      <created>1565747315053</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1565747315053</updated>
+    </task>
+    <task id="LOCAL-00004" summary="可以用这个获取登录steam的cookie">
+      <created>1565942197874</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1565942197874</updated>
+    </task>
+    <task id="LOCAL-00005" summary="steam在客户端计算rsa的js脚本">
+      <created>1565942261403</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1565942261403</updated>
+    </task>
+    <task id="LOCAL-00006" summary="改了一下对url请求的解析，现在应该可以随意访问文件目录了">
+      <created>1568215673285</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1568215673285</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -467,21 +518,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49643704" visible="true" weight="0.17336309" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49643704" visible="true" weight="0.17334037" />
       <window_info id="Structure" order="1" sideWeight="0.5035629" side_tool="true" weight="0.16294643" />
       <window_info id="Favorites" order="2" sideWeight="0.5035629" side_tool="true" weight="0.16294643" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
-      <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.67113096" weight="0.45762712" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32778355" />
+      <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.6547619" weight="0.45762712" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32615384" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32819724" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.6316964" weight="0.89214176" />
-      <window_info anchor="bottom" x="-83" y="442" width="1344" height="268" id="Run" order="8" sideWeight="0.32886904" side_tool="true" weight="0.45762712" />
+      <window_info anchor="bottom" x="-83" y="442" width="1344" height="268" id="Run" order="8" sideWeight="0.3452381" side_tool="true" weight="0.45762712" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.29864973" side_tool="true" weight="0.39966834" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3266564" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -514,7 +564,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="加了一些函数的注释," />
     <MESSAGE value="新的任务，看看写出来会不会亏钱。。。" />
-    <option name="LAST_COMMIT_MESSAGE" value="新的任务，看看写出来会不会亏钱。。。" />
+    <MESSAGE value="完成了初始的收入计算" />
+    <MESSAGE value="可以用这个获取登录steam的cookie" />
+    <MESSAGE value="steam在客户端计算rsa的js脚本" />
+    <MESSAGE value="改了一下对url请求的解析，现在应该可以随意访问文件目录了" />
+    <option name="LAST_COMMIT_MESSAGE" value="改了一下对url请求的解析，现在应该可以随意访问文件目录了" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -552,49 +606,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://E:/AppData/Roaming/Python/Python36/site-packages/scrapy/__init__.py" />
-    <entry file="file://E:/AppData/Roaming/Python/Python36/site-packages/scrapy/spiders/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/demo/demo/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="61" column="52" lean-forward="true" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/demo/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="73" column="47" lean-forward="true" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/headless.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python36/Lib/site-packages/matplotlib/pyplot.py" />
-    <entry file="file://$PROJECT_DIR$/Udacity/basic/py/csv_learning.py" />
-    <entry file="file://$PROJECT_DIR$/Udacity/basic/py/assessing_quiz-zh.py" />
-    <entry file="file://$PROJECT_DIR$/Udacity/basic/py/communicate_quiz-zh.py" />
-    <entry file="file://C:/Python36/Lib/site-packages/pandas/core/generic.py" />
-    <entry file="file://$PROJECT_DIR$/Udacity/basic/py/cleaning_practice-zh.py" />
-    <entry file="file://$PROJECT_DIR$/Udacity/basic/py/query_filter-zh.py" />
-    <entry file="file://$PROJECT_DIR$/Udacity/basic/py/cleaning_column_labels-zh.py" />
-    <entry file="file://$PROJECT_DIR$/Udacity/basic/py/appending-zh (1).py" />
-    <entry file="file://$PROJECT_DIR$/Udacity/basic/py/appending-zh.py" />
-    <entry file="file://E:/AppData/Local/Programs/Python/Python37/Lib/site-packages/matplotlib/pyplot.py" />
-    <entry file="file://$PROJECT_DIR$/sensor/data_classfy_test.py" />
-    <entry file="file://E:/AppData/Local/Programs/Python/Python37/Lib/site-packages/numpy/lib/npyio.py" />
     <entry file="file://E:/AppData/Local/Programs/Python/Python37/Lib/site-packages/request/__init__.py" />
     <entry file="file://E:/AppData/Local/Programs/Python/Python37/Lib/site-packages/bs4/__init__.py" />
     <entry file="file://$PROJECT_DIR$/spider/cookie_test.py">
@@ -678,13 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python36/Lib/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="301" column="4" selection-start-line="301" selection-start-column="4" selection-end-line="301" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/demo/spiders/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -710,9 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-820">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#298#329#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -764,27 +765,146 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/spider/steam_test.py" />
     <entry file="file://$PROJECT_DIR$/not_git/Udacity/basic/py/conclusions_groupby-zh.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="419">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/not_git/Udacity/basic/py/query_filter-zh.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/requests/api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-808" />
+        <state relative-caret-position="-252">
+          <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/steam_test.py">
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/requests/adapters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="119" column="33" lean-forward="true" selection-start-line="119" selection-start-column="33" selection-end-line="119" selection-end-column="33" />
+        <state relative-caret-position="288">
+          <caret line="515" selection-start-line="515" selection-end-line="515" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/steam_market/steam_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/steam_market/steam_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Son`client.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-1184660488/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4934" column="8" selection-start-line="4934" selection-start-column="8" selection-end-line="4934" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python36/Lib/typing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="2210" column="8" selection-start-line="2210" selection-start-column="8" selection-end-line="2210" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/video_stream.html" />
+    <entry file="file://$PROJECT_DIR$/web/video_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python36/Lib/urllib/parse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="589" column="4" selection-start-line="589" selection-start-column="4" selection-end-line="589" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-1184660488/nt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="291" column="4" selection-start-line="291" selection-start-column="4" selection-end-line="291" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/test.py" />
+    <entry file="file://C:/Python36/Lib/os.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5600">
+          <caret line="282" column="36" lean-forward="true" selection-start-line="282" selection-start-column="8" selection-end-line="282" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python36/Lib/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="119" column="4" selection-start-line="119" selection-start-column="4" selection-end-line="119" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/name.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/server_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1565709236374" expanded="false" signature="1361:1362" ph="..." />
-            <marker date="1565709236374" expanded="true" signature="2942:3192" ph="..." />
+            <element signature="e#46#66#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1568601853643" expanded="true" signature="248:255" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/video_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#p#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#video#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WebProxy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ProxyServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
         </state>
       </provider>
     </entry>

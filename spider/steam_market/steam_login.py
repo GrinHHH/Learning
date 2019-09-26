@@ -94,12 +94,14 @@ def get_steam_login_cookie(user,passwd):
             print('正在尝试登陆。。。')
             try:
                 page = sess.post(login_url,data = post_data_login,headers = header)
+                transfer_data = json.loads(page.text).get('transfer_parameters')
+                # test1 = sess.post('https://steamcommunity.com/login/transfer', data=transfer_data, headers=header)
+                test = sess.post('https://help.steampowered.com/login/transfer', data=transfer_data, headers=header)
             except Exception as e:
                 print('提交手机令牌出错。不是，你这破网能不能行了')
+                print(e)
                 return None
-            # transfer_data = json.loads(page.text).get('transfer_parameters')
-            # test1 = sess.post('https://steamcommunity.com/login/transfer', data=transfer_data, headers=header)
-            # test2 = sess.post('https://help.steampowered.com/login/transfer', data=transfer_data, headers=header)
+
             login_result = json.loads(page.text)
             if login_result.get('success')==True and login_result.get('login_complete')==True:
                 print('登录成功！')
@@ -109,6 +111,8 @@ def get_steam_login_cookie(user,passwd):
         temp = page.cookies.get_dict().items()
         for key,value in temp:
             login_cookie=login_cookie+key+'='+value+';'
+        temp = test.cookies.get_dict().get('sessionid')
+        login_cookie = login_cookie + 'sessionid' + '=' + temp + ';'
     else:
         print('只做了手机令牌登录，别的号先往后稍稍')
     return login_cookie
