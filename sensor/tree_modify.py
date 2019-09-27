@@ -2,6 +2,7 @@ import numpy as np      # 导入np方便矩阵运算
 import xlrd     # 用于读取表格
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
+import os
 
 
 def xls_tolist_python(xls,property_num,data_len):     # 定义函数将读取的表格数据转换为list数据，输入表格，列数，行数
@@ -157,6 +158,46 @@ def predict(tree, data):        # 定义函数预测分类，tree为树模型，
             return pre_result      # 返回子树分类结果
 
 
+def set_class(string):
+    if "car" in string or "车" in string:
+        return 2
+    elif "man" in string or "人" in string:
+        return 1
+    else:
+        return 0
+
+
+def get_data_set(path):
+    car = None
+    man = None
+    en = None
+    for dir_path,dir_name,file_name in os.walk(path):
+
+        if file_name:
+            for name in file_name:
+                class_ = set_class(name)
+                workbook = xlrd.open_workbook(dir_path+"/"+name)
+                sheet_train = workbook.sheet_by_name("sheet1")
+                rowNum = sheet_train.nrows
+                colNum = sheet_train.ncols
+                x = xls_tolist_python(sheet_train, colNum, rowNum)
+                if class_ == 2:
+                    if car is None:
+                        car = x
+                    else:
+                        car = np.append(car,x,axis=0)
+                elif class_ == 1:
+                    if man is None:
+                        man = x
+                    else:
+                        man = np.append(man,x,axis=0)
+                else:
+                    if en is None:
+                        en = x
+                    else:
+                        en = np.append(en,x,axis=0)
+    return car,man,en
+
 # feature_order = ['max','min','mean','range','var','std']    # 与表格数据的属性对应，用于节点模型保存
 
 # 从这里开始
@@ -169,41 +210,46 @@ result_2 = []
 
 # 整个下面一块用来读取之前生成的excel，函数输入，后两个为列数和行数，
 # 列数必须和excel相同，行数小于等于excel，相当于取多少样本
-workbook1 = xlrd.open_workbook(r'唐森/car.xls')
-sheet_train1 = workbook1.sheet_by_name('sheet1')
-x1 = xls_tolist_python(sheet_train1, 6, 172)
+# workbook1 = xlrd.open_workbook(r'唐森/car.xls')
+# sheet_train1 = workbook1.sheet_by_name('sheet1')
+# x1 = xls_tolist_python(sheet_train1, 6, 172)
+#
+# workbook2 = xlrd.open_workbook(r'唐森/man.xls')
+# sheet_train1 = workbook2.sheet_by_name('sheet1')
+# x2 = xls_tolist_python(sheet_train1, 6, 242)
+#
+# workbook3 = xlrd.open_workbook(r'唐森/en2.xls')
+# sheet_train1 = workbook3.sheet_by_name('sheet1')
+# x3 = xls_tolist_python(sheet_train1, 6, 236)
+#
+# workbook4 = xlrd.open_workbook(r'唐森/en3.xls')
+# sheet_train1 = workbook4.sheet_by_name('sheet1')
+# x4 = xls_tolist_python(sheet_train1, 6, 110)
+#
+# workbook5 = xlrd.open_workbook(r'唐森/man_3.xls')
+# sheet_train1 = workbook5.sheet_by_name('sheet1')
+# x5 = xls_tolist_python(sheet_train1, 6, 54)
+#
+# workbook6 = xlrd.open_workbook(r'唐森/man_8_12.xls')
+# sheet_train1 = workbook6.sheet_by_name('sheet1')
+# x6 = xls_tolist_python(sheet_train1, 6, 54)
 
-workbook2 = xlrd.open_workbook(r'唐森/man.xls')
-sheet_train1 = workbook2.sheet_by_name('sheet1')
-x2 = xls_tolist_python(sheet_train1, 6, 242)
 
-workbook3 = xlrd.open_workbook(r'唐森/en2.xls')
-sheet_train1 = workbook3.sheet_by_name('sheet1')
-x3 = xls_tolist_python(sheet_train1, 6, 236)
 
-workbook4 = xlrd.open_workbook(r'唐森/en3.xls')
-sheet_train1 = workbook4.sheet_by_name('sheet1')
-x4 = xls_tolist_python(sheet_train1, 6, 110)
-
-workbook5 = xlrd.open_workbook(r'唐森/man_3.xls')
-sheet_train1 = workbook5.sheet_by_name('sheet1')
-x5 = xls_tolist_python(sheet_train1, 6, 54)
-
-workbook6 = xlrd.open_workbook(r'唐森/man_8_12.xls')
-sheet_train1 = workbook6.sheet_by_name('sheet1')
-x6 = xls_tolist_python(sheet_train1, 6, 54)
 # 到这里数据加载完毕
 # 首先把车的标签置为1，做一次二分类
 # 即先区分有没有目标,可以理解为目标检测部分
-for row in range(len(x1)):
-    x1[row][-1] = 1
+
+data_car,data_man,data_en = get_data_set("xls_multi")
+for row in range(len(data_car)):
+    data_car[row][-1] = 1
 # 生成数据集
-data_set1 = np.concatenate((x1, x3,x4,x5,x6), axis=0)
+data_set1 = np.concatenate((data_car,data_man,data_en), axis=0)
 # 再把标签变为0，车0人1做一次二分类
-for row in range(len(x1)):
-    x1[row][-1] = 0
+for row in range(len(data_car)):
+    data_car[row][-1] = 0
 # 这里只用人和车的数据
-data_set2 = np.concatenate((x1,x5,x6), axis=0)
+data_set2 = np.concatenate((data_car,data_man), axis=0)
 # 下面为数据集分割
 train_set_1, test_set_1 = train_test_split(data_set1, test_size=0.2)
 train_set_2, test_set_2 = train_test_split(data_set2, test_size=0.2)

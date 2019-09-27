@@ -3,47 +3,27 @@ import numpy as np
 import xlwt
 from matplotlib import pyplot as plt
 
-# path_i = ['唐森/temp/car/','唐森/temp/man/','唐森/temp/en2/']
-# path_o = ['唐森/disposed/car/','唐森/disposed/man/','唐森/disposed/en2/']
-path = {'in':['唐森/temp/car/','唐森/temp/man/','唐森/temp/en2/'],
-        'num':[5,5,5],
-        'out':['唐森/disposed/car/','唐森/disposed/man/','唐森/disposed/en2/']}
-
 
 def data_dispose(input_path,num):
     for i in range(num):
-        title_txt = open('%s%d.txt'%(input_path,i), 'r+')
-        try:
-            full_txt = title_txt.readlines()
-            temp = np.shape(full_txt)[0]
-            regex = "\t"
-            new_txt = []
-            x = 0
-            for line in full_txt:
-                if re.search(regex, line):
-                    trans = ''
-                    list_1 = list(line)
-                    list_2 = ['0','0','0','0','0','0','0','0','0','0','0']
-                    for j in range(10):
-                        list_2[j] = list_1[j]
+        with open('%s%d.txt'%(input_path,i), 'r+',encoding="utf-8") as title_txt:
+            try:
+                result = []
+                for line in title_txt.readlines():
 
-                    if x != (temp-1):
-                        list_2[10] = "\n"
+                    if re.search(r'\t',line):
+                        content = line.split("\t")[0]
+                        content += '\n'
                     else:
-                        list_2[10] = ''
-                    line = trans.join(list_2)
-                    x += 1
-                new_txt.append(line)
+                        content = line
+                    result.append(content.strip(b'\x00'.decode()))
 
-                # else:
-                    # new_txt.append(line)
-
-            title_txt.seek(0)
-            title_txt.truncate(0)
-            title_txt.writelines(new_txt)
-        finally:
-            title_txt.close()
-        print('over')
+                title_txt.seek(0)
+                title_txt.truncate(0)
+                title_txt.writelines(result)
+            finally:
+                title_txt.close()
+            print('over')
 
 
 def data_divide(input_path,output_path,num):
@@ -122,8 +102,7 @@ def cal_eigenvalue(data, class_name):
 # 从这里开始，data_dispose用来删除数据里的时间戳，但有时候处理完还会报错，需要去txt里看看第二行是不是有突出部分
 # 数据文件命名统一为0开始，依次累加，如0.txt,1.txt....
 # 输入为：文件路径、文件数量。函数中路径都是目标文件的文件夹路径，比如0.txt，路径为xxx/xxx/0.txt，那么输入为xxx/xxx/
-# for f_path in path:
-#     data_dispose(f_path,5)
+
 # data_dispose('',9)
 # data_divide函数用来切分数据有效部分，参数为输入路径，输出路径，待切分的文件数量
 # 使用方法：函数会显示一张数据可视化图片，根据图片需要给出我们认为是有效数据的数据段，
